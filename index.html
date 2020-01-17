@@ -12,9 +12,58 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
         <style>
+            
             .container {
                 padding: 80px 120px;
+            }
+
+            .navbar {
+                font-family: Montserrat, sans-serif;
+                margin-bottom: 0;
+                background-color: #2d2d30;
+                border: 0;
+                font-size: 11px;
+                letter-spacing: 4px;
+                opacity: 0.9;
+            }
+
+            .navbar li a, .navbar .navbar-brand {
+                color: #d5d5d5;
+            }
+
+            .navbar-nav li a:hover {
+                color: #fff;
+            }
+
+            .navbar-nav li.active a {
+                color: #fff;
+                background-color: #29292c;
+            }
+
+            .navbar-default .navbar-toggle {
+                border-color: transparent;
+            }
+
+            .open .dropdown-toggle {
+                color: #fff;
+                background-color: #555;
+            }
+
+            .dropdown-menu li a {
+                color: #000;
+            }
+
+            .dropdown-menu li a:hover {
+                background-color: rgb(56, 173, 241);
+            }
+
+            body {
+                font: 400 15px/1.8 Lato, sans-serif;
+                color: #777;
             }
 
             .project {
@@ -43,11 +92,80 @@
                     display: none;
                 }
             }
+
+            .bg-1 {
+                background: #2d2d30;
+                color: #bdbdbd;
+            }
+
+            .bg-1 h3 {
+                color: #fff;
+            }
+
+            .bg-1 p {
+                font-style: italic;
+            }
+
+            footer {
+                background-color: #2d2d30;
+                color: #f5f5f5;
+                padding: 32px;
+            }
+
+            footer a {
+                color: #f5f5f5;
+            }
+
+            footer a:hover {
+                color: #777;
+                text-decoration: none;
+            }
+
+            h3, h4 {
+                margin: 10 px 0 30 px 0;
+                font-size: 30px;
+                color: #111;
+            }
+
+            .form-control {
+                border-radius: 0;
+            }
+
+            textarea {
+                resize: none;
+            }
         </style>
 
     </head>
 
-    <body>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <!-- Navigation bar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Pranav Bhardwaj</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#Carousel">Home</a></li>
+                        <li><a href="#Info">Info</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resume
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Interactive Resume</a></li>
+                                <li><a href="Pranav_Bhardwaj_Resume.pdf">Downloadable PDF</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <!-- Images -->
         <div id="Carousel" class="carousel slide" data-ride="carousel">
@@ -63,28 +181,32 @@
 
                 <!-- Image 1 -->
                 <div class="item active">
-                    <img src="me-1.jpg" alt="me1" width="1200" height="700">
+                    <img src="stanford.jpg" alt="stanford" width="1200" height="700">
                     <div class="carousel-caption">
-                        <h3>University of Illinois at Urbana-Champaign</h3>
-                        <p>Blue guys</p>
+                        <h3>Stanford University</h3>
+                        <p>
+                            I am finishing my M.S. in Statistics: Data Science in June 2020
+                        </p>
                     </div>
                 </div>
 
                 <!-- Image 2 -->
                 <div class="item">
-                    <img src="me-2.jpg" alt="me2" width="1200" height="700">
+                    <img src="uiuc.jpg" alt="uiuc" width="1200" height="700">
                     <div class="carousel-caption">
-                        <h3>Something else</h3>
-                        <p>yes</p>
+                        <h3>University of Illinois at Urbana-Champaign</h3>
+                        <p>I graduated from UIUC in 2018 with University Honors</p>
                     </div>
                 </div>
 
                 <!-- Image 3 -->
                 <div class="item">
-                    <img src="me-2.jpg" alt="me3" width="1200" height="700">
+                    <img src="math.jpg" alt="math" width="1200" height="700">
                     <div class="carousel-caption">
-                        <h3>Something</h3>
-                        <p>Nice</p>
+                        <h3>Mathematics</h3>
+                        <p>
+                            My studies and research are a blend of computational mathematics, statistics, and computer science
+                        </p>
                     </div>
                 </div>
 
@@ -102,50 +224,149 @@
             </div>
         </div>
 
-        <!-- Center text with projects -->
-        <div class="container text-center">
+        <!-- Information -->
+        <div id="Info" class="container text-center">
 
             <!-- Introduction -->
-            <h3>Pranav Bhardwaj</h3>
-            <p>I am a computational mathematician interested in offering data driven solutions to problems in healthcare, tech, and policy. </p>
+            <h3>Hello</h3>
+            <p>
+                I am a computational mathematician interested in offering data driven solutions to problems in healthcare, tech, and policy. 
+            </p>
 
-            <br>
+            <p>
+                In my free time I enjoy staying active. I enjoy going on hikes, exercising, and playing basketball, volleyball, and golf.  
+                I'll always love Chicago sports for better or for worse. I look forward to the Bulls and Bears finally putting things together
+                in the next few years. Lastly I'm a huge Peanuts fan, especially of Snoopy and Woodstock. 
+            </p>
 
-            <!-- Projects -->
-            <div class="row">
+    
+            </div>
+        </div>
 
-                <!-- Reinforcement learning project -->
-                <div class="col-sm-6">
-                    <p class="text-center"><strong>Using Reinforcement Learning to Manage My Assets</strong></p>
-                    <br>
-                    <a href="#tmp" data-toggle="collapse">
-                        <!-- Photo by Michael Longmire on Unsplash -->
-                        <img src="RL.jpg" class="img-circle project" alt="RL">
-                    </a>
-                    <div id="tmp" class="collapse">
-                        <p>Reinforcement Learning for Portfolio Allocation</p>
-                        <p>Summary</p>
-                        <p>Code</p>
-                        <p>Academic Paper</p>
+        <!-- Projects -->
+        <div id="Projects" class="bg-1">
+            <div class="container">
+                <h3 class="text-center">Projects</h3>
+
+                <br>
+
+                <p class="text-center">
+                    Below is a sample of some of my recent research. Click on the images to find out more information.
+                </p>
+
+                <br>
+
+                <div class="row">
+
+                    <!-- Reinforcement learning project -->
+                    <div class="col-sm-6">
+                        <p class="text-center"><strong>Deep Reinforcement Learning for Portfolio Optimization</strong></p>
+                        <br>
+                        <a href="#tmp" data-toggle="collapse">
+                            <!-- Photo by Michael Longmire on Unsplash -->
+                            <img src="RL.jpg" class="img-circle project" alt="RL">
+                        </a>
+                        <div id="tmp" class="collapse">
+
+                            <p>
+                                In this work I utilize state of the art reinforcement learning methods to manage
+                                my own financial assets. Trades are executed once a day to redistribute a portfolio
+                                of stocks within the S&P500 based on the algorithmically derived policy. 
+                            </p>
+
+                            <p>
+                                I took on this work to research state of the art actor-critic reinforcement 
+                                learning methods, implement deep neural networks for my own benefit, 
+                                and become more financially aware and literate. 
+                            </p>
+
+                            <p>Link: Coming soon!</p>
+                        </div>
+                    </div>
+    
+                    <!-- Opioid project-->
+                    <div class="col-sm-6">
+                        <p class="text-center"><strong>US Opioid Crisis</strong></p>
+                        <br>
+                        <a href="#tmp2" data-toggle="collapse">
+                            <!-- Photo by Michael Longmire on Unsplash -->
+                            <img src="opioid.jpg" class="img-circle project" alt="opioid">
+                        </a>
+                        <div id="tmp2" class="collapse">
+
+                            <p>
+                                My research has been part of an ongoing collaboration 
+                                between the VA, FDA, and Stanford which aims to better understand the 
+                                opioid epidemic and its effect within the VA patient system. 
+                            </p>
+
+                            <p>
+                                This research is currently private pending publication. However, I have discussed
+                                my motivation for pursuing this work as well as provided some data driven insights in the 
+                                article linked below. 
+                            </p>
+                            <p>Link: Coming soon!</p>
+                        </div>  
                     </div>
                 </div>
+             </div>
+        </div>
 
-                <!-- Opioid project-->
-                <div class="col-sm-6">
-                    <p><strong>US Opioid Crisis</strong></p>
-                    <br>
-                    <a href="#tmp2" data-toggle="collapse">
-                        <!-- Photo by Michael Longmire on Unsplash -->
-                        <img src="opioid.jpg" class="img-circle project" alt="opioid">
-                    </a>
-                    <div id="tmp2" class="collapse">
-                        <p>US Opioid Crisis</p>
-                        <p>Data Visualizations</p>
-                        <p>Code</p>
-                    </div>  
+
+        <!-- Contact -->
+        <div id="Contact" class="container">
+            <h3 class="text-center">Contact</h3>
+
+            <br>
+            
+            <div class="row test">
+                <div class="col-md-4">
+                    <p>I'm always happy to talk about technical and non-technical projects, don't hesitate to reach out!</p>
+                    <p>I'm also seeking full time employment following my June 2020 graduation. </p>
+                    <p><span class="glyphicon glyphicon-envelope"></span>Email: pranavb@stanford.edu</p>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button class="btn pull-right" type="submit">Send</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <footer class="text-center">
+            <p>Connect with me</p>
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+                $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function() {
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            })
+        </script>
 
 
     </body>
