@@ -14,6 +14,14 @@
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+        <style type="text/css">
+            .fa {
+              padding: 0px;
+              width: 20px;
+            }
+          </style>
 
         <style>
             
@@ -228,11 +236,11 @@
         <div id="Info" class="container text-center">
 
             <!-- Introduction -->
-            <h3>Hello</h3>
+            <h3>About</h3>
             <p>
                 My studies have been at the intersection of computational mathematics, statistics, and machine learning. My research
-                has primarily been in in healthcare applications, I am currently part of a research collaboration betweeen Stanford 
-                and the VA and FDA, looking in to how opioids and their effect on the VA patient population. 
+                has primarily been in healthcare applications, I am currently part of an ongoing research collaboration betweeen Stanford 
+                and the VA and FDA. This work has been concerning equitable deployment of opioid risk predictive models. 
             </p>
 
             <p>
@@ -261,6 +269,44 @@
                 <br>
 
                 <div class="row">
+
+                    <!-- Opioid project-->
+                    <div class="col-sm-6">
+                            <p class="text-center"><strong>Opioid Safety in the VA and FDA</strong></p>
+                            <br>
+                            <a href="#tmp2" data-toggle="collapse">
+                                <!-- Photo by Michael Longmire on Unsplash -->
+                                <img src="opioid.jpg" class="img-circle project" alt="opioid">
+                            </a>
+                            <div id="tmp2" class="collapse">
+    
+                                <p>
+                                    This work is part of an ongoing research collaboration between Stanford and the VA and FDA. The VA provided patient level data from 2016, 2017, and 2018 including information on comorbidities, demographics, mental health, and health outcomes. The VA and FDA are interested in how the opioid crisis has affected the VA patient population. 
+                                </p>
+    
+                                <p>
+                                    STORM is a clinical decision support tool which among other things provides a risk score associated with how likely a patient is to abuse opioids. Clinical decision support tools such as STORM must be utilized prior to prescribing opioids in the VA.
+                                </p>
+    
+                                <p>
+                                    Behind this risk score is a multivariate logistic regression. One goal of the research is to develop a framework for auditing such predictive models, to see how they are performing for different demographic groups. Using the provided data, we reconstructed this model, and have looked at false negative parity and calibration across race and gender. Currently we are looking in to additional measures, such as multiaccuracy. As part of this I have developed a binary classification model pipeline in Python using sklearn and pandas which has been passed along to the VA. 
+                                </p>
+    
+                                <p>
+                                    Additionally, decision makers in the VA are interested in trends in their patient population. I have created interactive data visualizations using d3, HTML, and CSS which look into patient demographics and adverse health outcomes.
+                                </p>
+    
+                                <p>
+                                    I began working on this project in July 2019 as part of Stanford's Data Science for Social Good research fellowship. I am now continuing this research as a graduate research assistant working with Suzanne Tamang in the Biomedical Data Science department. 
+                                </p>
+    
+                                <p>
+                                    Publication of this reseearch is currently pending. 
+                                </p>
+    
+                                
+                            </div>  
+                        </div>
 
                     <!-- Reinforcement learning project -->
                     <div class="col-sm-6">
@@ -293,27 +339,7 @@
                         </div>
                     </div>
     
-                    <!-- Opioid project-->
-                    <div class="col-sm-6">
-                        <p class="text-center"><strong>US Opioid Crisis</strong></p>
-                        <br>
-                        <a href="#tmp2" data-toggle="collapse">
-                            <!-- Photo by Michael Longmire on Unsplash -->
-                            <img src="opioid.jpg" class="img-circle project" alt="opioid">
-                        </a>
-                        <div id="tmp2" class="collapse">
-
-                            <p>
-                                My research has been part of an ongoing collaboration 
-                                between the VA, FDA, and Stanford which aims to better understand the 
-                                opioid epidemic and its effect within the VA patient system. 
-                            </p>
-
-                            <p>
-                                Publication related to this research is currently pending. 
-                            </p>
-                        </div>  
-                    </div>
+                    
                 </div>
              </div>
         </div>
@@ -330,9 +356,11 @@
                     <p>I am seeking full time employment following my graduation from Stanford in June 2020.</p>
                     <p>I'm always happy to talk about technical and non-technical projects, don't hesitate to reach out!</p>
                     <p><span class="glyphicon glyphicon-envelope"></span>Email: pranavb@stanford.edu</p>
+                    <p><a href="https://www.linkedin.com/in/pranav-bhardwaj-/"><i class="fa fa-linkedin"></i></a>: www.linkedin.com/in/pranav-bhardwaj-</p>
+                    <p><a href="https://github.com/Pranav-Bhardwaj8"><i class="fa fa-github"></i></a>: www.github.com/in/Pranav-Bhardwaj8</p>
                 </div>
 
-                <!-- <div class="col-md-8">
+                <div class="col-md-8">
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -350,12 +378,14 @@
                             <button class="btn pull-right" type="submit">Send</button>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
 
         <footer class="text-center">
             <p>Connect with me</p>
+            <a href="https://www.linkedin.com/in/pranav-bhardwaj-/"><i class="fa fa-linkedin"> </i></a>
+            <a href="https://github.com/Pranav-Bhardwaj8"><i class="fa fa-github"></i></a>
         </footer>
 
         <script>
